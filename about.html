@@ -1,21 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Cloud Cast</title>
-  <link rel="stylesheet" href="about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Cloud Cast</title>
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
-  <nav>
-    <a href="home.html">Home</a>
-    <a href="forecast.html">Forecast</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <main class="about-shell">
-    <h1>About Cloud Cast</h1>
-    <p>Cloud Cast was designed around weather updates for Kenya.</p>
-  </main>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Weather.jpg" alt="Cloud Cast logo">
+            <div>
+                <h1>CLOUD CAST</h1>
+                <p class="tagline">Kenya weather made simple</p>
+            </div>
+        </div>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="forecast.html">FORECAST</a></li>
+            <li><a href="about.html" aria-current="page">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main class="about-shell">
+        <section class="about-hero">
+            <p class="eyebrow">About Cloud Cast</p>
+            <h1>Kenya weather updates with a simple city-first experience.</h1>
+            <p>Cloud Cast was designed to make local weather easier to read for four key Kenyan cities: Nairobi, Eldoret, Kisumu, and Nakuru.</p>
+        </section>
+        <section class="about-grid">
+            <article class="about-card">
+                <h2>What the site includes</h2>
+                <p>City-based weather loading for Nairobi, Eldoret, Kisumu, and Nakuru.</p>
+                <p>Current temperature and condition indicators such as clear, cloudy, rainy, or stormy.</p>
+                <p>Short-term forecast cards for the next 5 days.</p>
+                <p>Simple alert messaging based on rainfall probability in the forecast.</p>
+            </article>
+            <article class="about-card">
+                <h2>How the data works</h2>
+                <p>The homepage uses fixed coordinates for the selected cities and requests forecast data from Open-Meteo.</p>
+            </article>
+        </section>
+        <section class="reference-card">
+            <h2>API References</h2>
+            <p>Forecast API: <a href="https://api.open-meteo.com/v1/forecast">https://api.open-meteo.com/v1/forecast</a></p>
+            <p>Open-Meteo Documentation: <a href="https://open-meteo.com/en/docs">https://open-meteo.com/en/docs</a></p>
+        </section>
+    </main>
 </body>
 </html>

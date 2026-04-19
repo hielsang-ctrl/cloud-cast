@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Cloud Cast</title>
-  <link rel="stylesheet" href="contact.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Cloud Cast</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-  <nav>
-    <a href="home.html">Home</a>
-    <a href="forecast.html">Forecast</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <main class="contact-shell">
-    <h1>Reach the Cloud Cast team.</h1>
-    <p>Send project feedback or feature requests.</p>
-  </main>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Weather.jpg" alt="Cloud Cast logo">
+            <div>
+                <h1>CLOUD CAST</h1>
+                <p class="tagline">Kenya weather made simple</p>
+            </div>
+        </div>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="forecast.html">FORECAST</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html" aria-current="page">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main class="contact-shell">
+        <section class="contact-intro">
+            <p class="eyebrow">Contact</p>
+            <h1>Reach the Cloud Cast team.</h1>
+            <p>Send project feedback or feature requests.</p>
+        </section>
+        <section class="contact-grid">
+            <article class="contact-card">
+                <h2>Email</h2>
+                <p>cloudcast@weather.ke</p>
+            </article>
+            <article class="contact-card">
+                <h2>Phone</h2>
+                <p>+254 700 123 456</p>
+            </article>
+        </section>
+        <section class="contact-form-wrap">
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="your@email.com">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us more"></textarea>
+                <button type="submit">Send message</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>

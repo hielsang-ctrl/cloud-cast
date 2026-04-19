@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forecast | Cloud Cast</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="forecast.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast | Cloud Cast</title>
+    <link rel="stylesheet" href="forecast.css">
 </head>
 <body>
-  <nav>
-    <a href="home.html">Home</a>
-    <a href="forecast.html">Forecast</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <main class="forecast-shell">
-    <h1>Five-day forecast</h1>
-    <div class="forecast-grid">
-      <article>Coming soon for Nairobi</article>
-      <article>Coming soon for Eldoret</article>
-    </div>
-  </main>
-</body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="Weather.jpg" alt="Cloud Cast logo">
+        <div>
+          <h1>CLOUD CAST</h1>
+          <p class="tagline">Kenya weather made simple</p>
+        </div>
+      </div>
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="forecast.html" aria-current="page">FORECAST</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <main class="forecast-shell">
+      <section class="forecast-hero">
+        <p class="eyebrow">Forecast Overview</p>
+        <h1>Short-term weather planning for four major Kenyan cities.</h1>
+        <p>Cloud Cast focuses on Nairobi, Eldoret, Kisumu, and Nakuru with live current conditions and a short 5-day forecast powered by Open-Meteo.</p>
+      </section>
+      <section class="forecast-grid">
+        <article class="forecast-tile">
+          <h2>Nairobi</h2>
+          <p>Urban day-to-day forecast for commuting, events, and outdoor planning.</p>
+        </article>
+        <article class="forecast-tile">
+          <h2>Eldoret</h2>
+          <p>Highland temperature shifts and likely rain trends across the week.</p>
+        </article>
+        <article class="forecast-tile">
+          <h2>Kisumu</h2>
+          <p>Lakeside warmth, humidity, and rain probability outlook.</p>
+        </article>
+        <article class="forecast-tile">
+          <h2>Nakuru</h2>
+          <p>Balanced view of daytime highs, cool nights, and cloud cover changes.</p>
+        </article>
+      </section>
+      <section class="reference-panel">
+        <h2>API References</h2>
+        <p>Forecast endpoint: <a href="https://api.open-meteo.com/v1/forecast">https://api.open-meteo.com/v1/forecast</a></p>
+        <p>Documentation: <a href="https://open-meteo.com/en/docs">https://open-meteo.com/en/docs</a></p>
+        <p>Timezone used: <strong>Africa/Nairobi</strong></p>
+        <p>Data fields used on Cloud Cast: temperature, humidity, weather code, wind speed, daily highs and lows, and precipitation probability.</p>
+        <pre class="api-snippet">https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&timezone=Africa%2FNairobi&forecast_days=5&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max</pre>
+      </section>
+    </main>
+  </body>
 </html>
