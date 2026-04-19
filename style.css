@@ -1,20 +1,24 @@
-body {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-}
-
-nav {
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
-  background: #333;
-}
-
-nav a {
-  color: lightblue;
-  text-decoration: none;
-}
-
-main {
-  padding: 2rem;
-}
+body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: #1f2530; background: linear-gradient(180deg, #fff7f6 0%, #ffd6d2 100%); }
+img { display: block; max-width: 100%; }
+.navbar, nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 2rem; background: #333; }
+.logo { display: flex; align-items: center; gap: 1rem; }
+.logo img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; }
+.logo h1 { margin: 0; color: lightcoral; }
+.tagline, .navbar a, nav a { color: lightblue; }
+.navbar ul { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.navbar a, nav a { text-decoration: none; font-weight: 700; }
+.main-content, main { padding: 2rem; }
+.hero-section, .alerts-section, .forecast-section { background: rgba(255,255,255,0.88); border-radius: 22px; box-shadow: 0 14px 34px rgba(31,37,48,0.12); padding: 2rem; margin-bottom: 1.5rem; }
+.city-switcher { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.btn { border: 0; padding: 0.75rem 1rem; background: lightcoral; color: white; border-radius: 999px; cursor: pointer; }
+.current-weather-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+.metric-card { padding: 1rem; border-radius: 18px; background: rgba(173,216,230,0.28); }
+.metric-card.primary { background: lightcoral; color: white; }
+#footer { background: #222; color: white; padding: 1rem; text-align: center; }
+.hero-section { display: grid; grid-template-columns: 1.2fr 0.9fr; gap: 1.5rem; }
+#forecast-cards { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 1rem; }
+.forecast-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+.forecast-card, .forecast-tile { padding: 1rem; border-radius: 18px; background: rgba(255,255,255,0.92); box-shadow: 0 10px 24px rgba(31,37,48,0.08); }
+.day-label { color: #a24d4d; font-weight: 700; }
+@media (max-width: 900px) { .navbar, nav, .city-switcher { flex-wrap: wrap; } .hero-section, #forecast-cards, .forecast-grid { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .navbar, nav { flex-direction: column; padding: 1rem; } }
